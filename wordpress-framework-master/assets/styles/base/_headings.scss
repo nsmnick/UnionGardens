@@ -1,0 +1,66 @@
+
+h1 {
+	font-size: $h1-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h1-size;
+	}
+}
+
+h2 {
+	font-size: $h2-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h2-size;
+	}
+}
+
+h3 {
+	font-size: $h3-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h3-size;
+	}
+}
+
+h4 {
+	font-size: $h4-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h4-size;
+	}
+}
+
+h5 {
+	font-size: $h5-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h5-size;
+	}
+}
+
+h6 {
+	font-size: $h6-size-mobile;
+
+	@include bp(lap) {
+		font-size: $h6-size;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-font-family;
+	line-height: $heading-line-height;
+	margin-top: 0;
+	margin-bottom: .6em;
+	font-weight: 800;
+	//letter-spacing: -0.03em;
+	
+	&.large-bottom {
+		margin-bottom: 1.8em;
+	}
+}

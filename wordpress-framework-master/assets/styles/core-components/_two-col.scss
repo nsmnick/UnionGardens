@@ -1,0 +1,197 @@
+.two-col-container {
+  display: block;
+
+  $flex_snap: 700px;
+
+  @include bp(lap) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--flex-mobile {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include bp($flex_snap) {
+      flex-direction: row;
+    }
+  }
+
+  &__col {
+    //border: solid 1px green;
+
+    text-align: left;
+
+    // border: solid 1px yellow;
+
+    @include bp(lap) {
+      text-align: left;
+    }
+
+    display: block;
+    margin-bottom: 20px;
+
+    @include bp(lap) {
+      flex: 0 0 44%;
+      margin-bottom: 0px;
+    }
+
+    &--no-gutter {
+      @include bp(lap) {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--med-gutter {
+      @include bp(lap) {
+        flex: 0 0 46%;
+      }
+    }
+
+    &--small-gutter {
+      @include bp(lap) {
+        flex: 0 0 47%;
+      }
+    }
+
+    &--tiny-gutter {
+      @include bp(lap) {
+        flex: 0 0 48%;
+      }
+    }
+
+    &--flex-slider {
+      flex: 0 0 100%;
+
+      @include bp($flex_snap) {
+        flex: 0 0 50%;
+        flex: 1;
+        width: 50%;
+      }
+
+      @include bp(lap) {
+        flex: 0 0 50%;
+        flex: 1;
+        width: 50%;
+      }
+    }
+
+    // Col Margin Bottoms for when columns wrap
+
+    &--mb-30 {
+      margin-bottom: 30px;
+      @include bp(lap) {
+        margin-bottom: 0px;
+      }
+    }
+
+    &--mb-130 {
+      margin-bottom: 130px;
+      @include bp(lap) {
+        margin-bottom: 0px;
+      }
+    }
+
+    // Pad bottom for when columns wrap and there is a box shadow already with a margin set.
+    &--pb-30 {
+      padding-bottom: 30px;
+      @include bp(lap) {
+        padding-bottom: 0px;
+      }
+    }
+  }
+
+  // Offset Cols
+
+  &__col30 {
+    margin-bottom: 10px;
+
+    @include bp(lap) {
+      flex: 0 0 30%;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__col35 {
+    margin-bottom: 10px;
+
+    @include bp(lap) {
+      flex: 0 0 35%;
+      margin-bottom: 0px;
+    }
+
+    &--mb-40 {
+      margin-bottom: 40px;
+      @include bp(lap) {
+        margin-bottom: 0px;
+      }
+    }
+
+    &--mb-80 {
+      margin-bottom: 80px;
+      @include bp(lap) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__col45 {
+    //background-color: green;
+    margin-bottom: 10px;
+    //border: solid 2px red;
+
+    @include bp(lap) {
+      flex: 0 0 45%;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__col55 {
+    //background-color: blue;
+
+    margin-bottom: 10px;
+
+    @include bp(lap) {
+      flex: 0 0 55%;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__col60 {
+    margin-bottom: 10px;
+
+    @include bp(lap) {
+      flex: 0 0 60%;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__col70 {
+    margin-bottom: 10px;
+
+    @include bp(lap) {
+      flex: 0 0 70%;
+      margin-bottom: 0px;
+    }
+  }
+
+  // Ordering
+
+  &__order1_mobile {
+    order: 1;
+    //margin-bottom: 50px !important;
+
+    @include bp(lap) {
+      order: inherit;
+      margin-bottom: inherit;
+    }
+  }
+
+  &__order2_mobile {
+    order: 2;
+    @include bp(lap) {
+      order: inherit;
+    }
+  }
+}

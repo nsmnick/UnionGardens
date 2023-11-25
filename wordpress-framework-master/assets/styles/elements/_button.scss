@@ -1,0 +1,74 @@
+.button-center-container {
+  text-align: center;
+  margin: 0 auto;
+
+  &--mt-40 {
+    margin-top: 40px;
+  }
+}
+
+
+button.button,
+a.button, div.button {
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  border: solid 3px getcolor('brand_purple');
+  border-radius: 5px;
+  color: getcolor('brand_purple');
+
+  font-family: $heading-font-family;
+  font-weight: bold;
+
+  line-height: 1.2;
+  white-space: nowrap;
+  z-index: 5;
+  transition: all .3s ease-out;
+
+  font-size: 16px;
+  padding: 10px 30px;
+
+  @include bp(lap) {
+    padding: 10px 40px;
+    font-size: 22px;
+    line-height: 1em;
+  }
+
+  &:hover {
+    color: getcolor('white');
+    background-color: getcolor('brand_purple');
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  
+  &--white {
+    border: solid 3px getcolor('white');
+    background: transparent;
+    color: getcolor('white');
+
+    &:hover {
+      color: getcolor('brand_purple');
+      background-color: getcolor('white');
+    }
+
+  }
+
+  &--mt-40 {
+    margin-top: 40px;
+  }
+
+}
+
+div.button {
+
+  &:hover {
+    pointer-events: none;
+  }
+}
+
+
+

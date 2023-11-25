@@ -1,0 +1,29 @@
+TO DO
+-----
+
+CONTENT 
+
+DONE: - Footer - Remove phone number (check)
+DONE: - Footer - Privacy Policy - check
+DONE: - Our Work: Embedded Video - Check
+DONE: - About Us - Embedded Video - Check
+DONE: - Reports and policies - require policies to link to?
+
+DONE: - Home: Add quotes (pending)
+DONE: - Footer - Instagram and Facebook URLS - Get
+DONE - Funding and support - Add in Links
+DONE: - Whats On: Add supplied events
+DONE - Battersea Community Festival - Move content around as discussed with Franki.
+
+
+General
+
+DONE: - About Us - Add in all team photos we have
+DONE: - Batterea Alliance - Images - require 
+DONE: SEO - Redirects - Run in and test
+DONE: Check and Tidy up old code
+DONE: SEO - Titles & Sitemap
+
+- Contact Us - Selections for drop down field in form, and email addresses to send forms.
+Go Live - GA - add in script
+

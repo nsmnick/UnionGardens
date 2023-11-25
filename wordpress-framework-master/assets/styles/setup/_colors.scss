@@ -1,0 +1,83 @@
+// Site Colours
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+
+$color-panel-grey: #F8F6F0;
+$color-panel-green: #F8FAF4;
+$color-brand-blue: #406D98;
+$color-brand-purple: #371538;
+$color-brand-light-purple: #E0DCE1;
+$color-brand-gold: #CBBBA0;
+$color-brand-mid-gold: #d6ccba;
+$color-brand-light-gold: #F1EEE8;
+
+
+$color-brand-grey: #8E8E8E;
+$color-brand-red: #E74913;
+$color-brand-green: #1B8D3A;
+$color-brand-yellow: #FEB909;
+
+$color-light-grey: #D9D9D9;
+$color-pale-yellow: #FFEFD2;
+$color-pale-orange: #fde5de;
+
+// Generic Colours
+$c-body-text: $color-black;
+$c_hyperlink: $color-black;
+$c_hyperlink_hover: $color-brand-blue;
+
+
+/*
+RGB values.
+*/
+$color-rgb-white: getrgb($color-white);
+$color-rgb-black: getrgb($color-black);
+$color-rgb-red: getrgb($color-brand-red);
+$color-rgb-blue: getrgb($color-brand-blue);
+$color-rgb-green: getrgb($color-brand-green);
+$color-rgb-yellow: getrgb($color-brand-yellow);
+$color-rgb-purple: getrgb($color-brand-purple);
+$color-rgb-gold: getrgb($color-brand-gold);
+
+
+@include setvars(
+  (
+    'white': $color-white,
+    'black': $color-black,
+    'panel_grey': $color-panel-grey,
+    'panel_green': $color-panel-green,
+    'panel_blue': $color-brand-blue,
+    'brand_grey': $color-brand-grey,
+    'brand_red': $color-brand-red,
+    'brand_green': $color-brand-green,
+    'brand_yellow': $color-brand-yellow,
+    'brand_blue': $color-brand-blue,
+    'light_grey': $color-light-grey,
+    'pale_yellow': $color-pale-yellow,
+    'pale_orange': $color-pale-orange,
+    'brand_purple': $color-brand-purple,
+    'brand_gold': $color-brand-gold,
+    'brand_light_purple': $color-brand-light-purple,
+    'brand_light_gold': $color-brand-light-gold,
+    'brand_mid_gold': $color-brand-mid-gold
+  ),
+  'color'
+);
+
+
+
+@include setvars(
+  (
+    'white': $color-rgb-white,
+    'black': $color-rgb-black,
+    'brand_red': $color-rgb-red,
+    'brand_blue': $color-rgb-blue,
+    'brand_green': $color-rgb-green,
+    'brand_yellow': $color-rgb-yellow,
+    'brand_purple': $color-rgb-purple,
+    'brand_gold': $color-rgb-gold,
+  ),
+  'color-rgb'
+);

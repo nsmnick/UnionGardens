@@ -1,0 +1,31 @@
+.container {
+
+  display: block;
+  width: auto;
+  float: none;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0px 10px;
+
+  &--no-padding-mobile {
+    padding: 0px 0px;
+  }
+
+
+  @include bp(600px) {
+    max-width: 1560px;
+    padding: 0px 45px;
+    
+  }
+
+  &--narrow {
+
+    @include bp(600px) {
+      max-width: 1090px;
+      padding: 0px 45px;
+    }
+  }
+  
+
+
+}

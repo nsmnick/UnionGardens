@@ -1,0 +1,40 @@
+
+.panel {
+
+	background-color: getcolor('white');
+
+	padding: 40px 10px;
+	
+	@include bp(lap) {		
+		padding: 60px 0px;
+	}
+
+	@include bp(desk) {
+		padding: 70px 0px;
+	}
+
+	&--ext-bot {
+		padding-bottom: 120px;
+	
+		@include bp(lap) {		
+			padding-bottom: 190px;
+		}
+	
+		@include bp(desk) {
+			padding-bottom: 200px;
+		}	
+	}
+
+	&--ext-top {
+		padding-top: 120px;
+	
+		@include bp(lap) {		
+			padding-top: 150px;
+		}
+	
+		@include bp(desk) {
+			padding-top: 200px;
+		}	
+	}
+
+}

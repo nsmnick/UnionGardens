@@ -1,0 +1,7 @@
+@mixin link-hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content
+  }
+}

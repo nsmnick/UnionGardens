@@ -1,0 +1,89 @@
+@mixin wysiwyg-styles($color: #ffffff)
+{
+   
+
+	h2 {
+		color: $color;
+		font-size: 30px;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		color: $color;
+		font-size: 20px;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+
+	h4 {
+		color: $color;
+		font-size: 16px;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+
+
+	img {
+		display: block;
+		margin: 20px auto 20px;
+		max-width: 400px;
+	}
+
+	ul {
+
+		list-style: none;
+		text-align: left;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		font-weight: 200;
+
+		li {
+			padding-left: 20px;
+			margin-bottom: 15px;
+			position: relative;
+			font-weight: 200;
+			
+			&:before {
+				content: "";
+				display: block;
+				height: 5px;
+				width: 5px;
+				border-radius: 50%;
+				background: $color;
+				position: absolute;
+				top: 12px;
+				left: 0;
+			}
+
+
+			ul {
+
+				font-weight: 200;
+			
+				li {
+					
+					padding-left: 10px;
+					font-weight: 200;
+					
+					&:before {
+						content: "-";
+						display: block;
+						height: 5px;
+						width: 5px;
+						background-color: inherit;
+						border-radius: none;
+						background: $color;
+						position: absolute;
+						top: 0px;
+						left: 0;
+					}
+				}
+			
+			}
+
+
+		}
+
+	}
+}

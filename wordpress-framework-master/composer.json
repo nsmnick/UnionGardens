@@ -1,0 +1,37 @@
+{
+    "name": "knappster/wordpress-framework",
+    "authors": [
+        {
+            "name": "Carl Knapp",
+            "email": "kn4ppster@gmail.com"
+        }
+    ],
+	"type": "project",
+	"description": "Small boilerplate for Wordpress projects.",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.10",
+		"wpackagist-plugin/classic-editor": "^1.6",
+        "wpackagist-plugin/wordpress-seo": "^19.8",
+        "wpackagist-plugin/better-wp-security": "^8.1"
+    },
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/themes/{$name}/": ["type:wordpress-theme"],
+            "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require-dev": {
+        "phan/phan": "^5.4"
+    }
+}

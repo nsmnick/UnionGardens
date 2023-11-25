@@ -1,0 +1,207 @@
+.no-results {
+  text-align: center;
+}
+
+@keyframes loading_spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.generic-controls {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  &__loading-spinner {
+    $spinner-size: 40px;
+    width: $spinner-size;
+    height: $spinner-size;
+    margin: 0 auto 20px;
+    position: relative;
+
+    &::after {
+      // @extend .fas;
+     content: '';
+     background-image: url('../images/spinner.png');
+     //background-color: red;
+      background-position: center;
+      background-size: contain;
+      display: block;
+      width: $spinner-size;
+      height: $spinner-size;
+      font-size: $spinner-size;
+      line-height: $spinner-size;
+      transform: rotate(0deg);
+      animation: loading_spinner 0.8s linear infinite;
+    }
+  }
+
+  &__show-more-button {
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    border: solid 3px getcolor('brand_purple');
+    border-radius: 5px;
+    color: getcolor('brand_purple');
+
+    font-family: $heading-font-family;
+    font-weight: bold;
+
+    line-height: 1.2;
+    white-space: nowrap;
+    z-index: 5;
+    transition: all .3s ease-out;
+
+    font-size: 16px;
+    padding: 10px 30px;
+
+    @include bp(lap) {
+      padding: 10px 40px;
+      font-size: 22px;
+      line-height: 1em;
+    }
+
+    &:hover {
+      color: getcolor('white');
+      background-color: getcolor('brand_purple');
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.generic-results {
+  &__info {
+    margin: 20px auto;
+
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include bp(500px) {
+      margin: 20px 0px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-top: 30px;
+      text-align: left;
+      border: solid 1px red;
+    }
+
+    &__count {
+      flex: 0 0 100%;
+      font-size: 16px;
+      font-weight: 400;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__no-results {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  $large_gutter1: 20px;
+  $large_gutter1: 40px;
+
+  $mid_snap1: 970px;
+  $top_snap1: 1150px;
+
+  &__list {
+    display: block;
+    //border: solid 1px red;
+
+    @include bp($mid_snap1) {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &__article {
+      margin-bottom: $large_gutter1;
+
+      &--yellow {
+        background-color: rgb(getcolorrgb('brand_yellow') / 15%);
+        padding: 20px 10px;
+      }
+
+      .post-date {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        line-height: 1.3;
+        font-weight: 600;
+      }
+
+      h3.news {
+        line-height: 1.3;
+        margin-bottom: 0px;
+      }
+     // border: solid 1px yellow;
+
+      @include bp($mid_snap1) {
+        flex: 0 0 calc(50% - 20px);
+        margin-right: $large_gutter1;
+
+        &:nth-child(4n) {
+          margin-right: $large_gutter1;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0px;
+        }
+      }
+
+      @include bp($top_snap1) {
+        flex: 0 0 calc(33% - 24px);
+        margin-right: $large_gutter1;
+
+        &:nth-child(2n) {
+          margin-right: $large_gutter1;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0px;
+        }
+      }
+
+      &--two {
+        @include bp($top_snap1) {
+          flex: 0 0 calc(50% - 20px);
+          margin-right: $large_gutter1;
+
+          &:nth-child(4n) {
+            margin-right: $large_gutter1;
+          }
+
+          &:nth-child(2n) {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    &__article--two-no-gutter {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 60px;
+
+      // border: solid 1px yellow;
+
+      @include bp($mid_snap1) {
+        flex: 0 0 50%;
+        margin-right: 0px;
+      }
+      @include bp($top_snap1) {
+        flex: 0 0 50%;
+        margin-right: 0px;
+      }
+    }
+  }
+}

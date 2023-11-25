@@ -1,0 +1,183 @@
+.page-header {
+  width: 100%;
+  z-index: 500;
+  display: block;
+  
+  position: absolute;
+  top: 40px;
+
+
+  background-color: rgba(255,255,255,.5);
+
+	width: 100%;
+	height: 100px;
+
+	overflow: visible;
+	z-index: 99999;
+
+	@include bp($mobile-menu-snap) {
+		height: 100px;
+	}
+
+
+  
+
+  &__main-menu {
+
+		// Mobile Menu
+		background-color: getcolor('black');
+
+		position: fixed;
+		top: 0px;
+		bottom: 0;
+		left: 100%;
+		width: 100%;
+		z-index: 9999;
+		padding-top: 140px;
+		overflow: auto;
+		transition: left .2s ease-out;
+
+		@include bp($mobile-menu-snap) {
+			background-color: transparent;
+			display: block;
+			
+			padding-top: 10px;
+			position: static;
+			margin: 0 auto;
+			text-align: center;
+			overflow: visible;
+		}
+
+		&--open {
+			width: 100%;
+			left: 0px;
+		}
+
+
+		
+
+	}
+
+
+	&__mobile-logo-container {
+
+		z-index: 10000;
+		display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+
+		@include bp($mobile-menu-snap) {
+			display: none;
+		}
+
+	}
+	&__mobile-logo {
+
+		padding-top: 10px;
+		margin: 0px auto 0px;
+
+		background-image: url('../images/union-gardens-logo.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		// width: 260px;
+		// height: 112px;
+		width: 357px;
+		height: 53px;
+
+	}
+
+	&__menu-button-container {
+
+		z-index: 10000;
+		display: block;
+
+		@include bp($mobile-menu-snap) {
+			display: none;
+		}
+
+	}
+
+
+	.hamburger-toggle {
+
+		position: absolute;
+			top: 15px;
+			right: 15px;
+			width: 30px;
+			height: 30px;
+			transition-duration: 0.5s;
+			z-index: 999;
+			
+		  
+			&__left,
+			&__right {
+				transition-duration: 0.5s;
+				position: absolute;
+				height: 4px;
+				width: 15px;
+				top: 15px;
+				background-color: getcolor('black');
+
+				&:before,
+				&:after {
+					transition-duration: 0.5s;
+					position: absolute;
+					height: 4px;
+					width: 15px;
+					background-color: getcolor('black');
+					content: "";
+				}
+
+				&:before {
+					top: -10px;
+				}
+
+				&:after {
+					top: 10px;
+				}
+			}
+
+			&__left {
+				left: 0px; 
+			}
+
+			&__right {
+				left: 15px;
+			}
+
+			&:hover{
+		      cursor: pointer;
+		    } 
+
+		    @include bp($mobile-menu-snap) {
+		    	display: none;
+		    }
+
+	}
+
+	.js-mobile-menu-open { 
+
+		color: getcolor('white');
+		z-index: 99999;
+
+
+		.hamburger-toggle__left,
+		.hamburger-toggle__right {
+			transition-duration: 0.5s;
+			background: transparent !important;
+
+		}
+
+		.hamburger-toggle__left {
+			
+			&:before { background-color: getcolor('white'); transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px); }
+			&:after { background-color: getcolor('white'); transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px); }
+		}
+
+		.hamburger-toggle__right {
+			&:before { background-color: getcolor('white'); transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px); }
+			&:after { background-color: getcolor('white'); transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px); }
+		}
+	}
+}

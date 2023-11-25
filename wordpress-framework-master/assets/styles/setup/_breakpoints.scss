@@ -1,0 +1,35 @@
+
+/*
+
+Media query breakpoints can be used anywhere in SASS with the following syntax:
+
+@include bp([alias or px value]) {
+	// styles
+}
+
+Aliases: 
+mobile - special case, see note below.
+lap
+desk
+wide
+ 
+All aliases check for min-width except 'mobile' which tests for max-width (try not to use if possible).
+When using px values the media query is always for min-width.
+
+You can check for high pixel density displays (for @2x image switching, etc.) using the following function:
+
+@include twox {
+	// styles
+}
+
+*/
+
+$mobile-max-width: 768px;
+$lap-min-width: 950px;
+$desk-min-width: 1025px;
+$wide-min-width: 1201px;
+
+
+$menu-snap: 1160px;
+$content-snap: 1160px;
+$deskwide-snap: 1500px;

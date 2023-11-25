@@ -1,0 +1,77 @@
+$tiny_gutter: 5px;
+$small_gutter: 20px;
+$large_gutter: 40px;
+
+.three-col-container {
+  display: block;
+
+  @include bp(lap) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--auto-spaced {
+      flex-wrap: none;
+      justify-content: space-between;
+    }
+
+    &--auto-start {
+      flex-wrap: none;
+      justify-content: flex-start;
+    }
+  }
+
+  &__col {
+    margin-bottom: $small_gutter;
+
+    //border: solid 1px green;
+
+    &--large {
+      margin-bottom: $large_gutter;
+    }
+
+    &--mb-20 {
+      margin-bottom: 20px;
+    }
+
+    //border: solid 1px red;
+
+    @include bp(lap) {
+      flex: 0 0 calc(33% - 20px);
+      margin-right: $small_gutter;
+
+      &--auto {
+        flex: 0 0 33%;
+        margin-right: 0;
+
+        &--2 {
+          flex: 0 0 32%;
+        }
+      }
+
+      &--small {
+        flex: 0 0 calc(33% - 5px);
+        margin-right: $tiny_gutter;
+
+        &--auto {
+          flex: 0 0 30%;
+          margin-right: 0;
+        }
+      }
+
+      &--large {
+        flex: 0 0 calc(33% - 40px);
+        margin-right: $large_gutter;
+
+        &--auto {
+          flex: 0 0 30%;
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
