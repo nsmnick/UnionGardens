@@ -11,13 +11,17 @@ get_header();
     <div class="container">
 
         <div class="content-container">
-            <h1><?php echo get_field('introduction_heading');?></h1>
+            <h1 class="animate-fade"><?php echo get_field('introduction_heading');?></h1>
             
-            <div class="global-detail-container">
+            <div class="introduction animate">
+                <?php echo get_field('introduction_bold');?>
+            </div>
+
+            <div class="global-detail-container animate">
                 <?php echo get_field('introduction');?>
             </div>
 
-            <div class="layout-image">
+            <div class="layout-image animate-fade">
                 <img src="<?php echo get_field('introduction_image');?>"/>
             </div>
         </div>
@@ -32,7 +36,7 @@ get_header();
 
         <?php $floorplan_gallery = get_field('image_gallery');
         
-        echo '<h2>'.$floorplan_gallery['heading'].'</h2>';
+        echo '<h2 class="animate-fade">'.$floorplan_gallery['heading'].'</h2>';
 
         $slides_html = '';
         $thumbs_html = '';
@@ -51,7 +55,7 @@ get_header();
         
         ?>
 
-        <div class="gallery-slider-container">
+        <div class="gallery-slider-container class="animate-fade"">
 
         
 
@@ -102,7 +106,7 @@ get_header();
 
         <?php $floorplan_gallery = get_field('floor_plans');
         
-        echo '<h2>'.$floorplan_gallery['heading'].'</h2>';
+        echo '<h2 class="animate-fade">'.$floorplan_gallery['heading'].'</h2>';
 
         $slides_html = '';
         $thumbs_html = '';
@@ -121,7 +125,7 @@ get_header();
         
         ?>
 
-        <div class="gallery-slider-container">
+        <div class="gallery-slider-container animate-fade">
 
             <div class="slider-container">
                 <div class="swiper fp-gallery-slider">
@@ -168,10 +172,10 @@ get_header();
 <section class="panel content content__form">
     <div class="container">
 
-        <h2><?php echo get_field('form_heading');?></h2>
+        <h2 class="animate-fade"><?php echo get_field('form_heading');?></h2>
 
 
-        <div class="gravity-form-container animate-fade">
+        <div class="gravity-form-container animate">
             <?php 
                 echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');
             ?>

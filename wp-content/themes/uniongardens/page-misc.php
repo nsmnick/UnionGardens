@@ -15,11 +15,8 @@ get_header();
 
         <div class="content-container">
 
-            <h1>Page not found</h1>
-            
-			<h4>Sorry, this page is does not exist or is no longer available.</h4>
-			<p>Please use the menu to find the page you are after.</p>
-
+            <h1><?php the_title();?></h1>
+            <?php the_content();?>
         </div>
 
     </div>

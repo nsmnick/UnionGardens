@@ -6,7 +6,7 @@
 		<div class="footer-container">
 				
 			<div class="footer-container__col">
-				<?php  $copyright =  str_replace('{date}', date('Y'), get_field('copyright_message'));?>
+				<?php  $copyright =  str_replace('{date}', date('Y'), get_field('copyright_message','options'));?>
 				<div class="copyright-message"><?php echo $copyright;?></div>
 			</div>
 
@@ -36,6 +36,7 @@
 		</div>
 		<div class="cookie-accept__controls">
 			<button id="cookie-accept__allow" class="cookie-accept__allow">Allow Cookies</button>
+			<button id="cookie-accept__deny" class="cookie-accept__deny">Reject Cookies</button>
 		</div>
 	</div>
 </div>

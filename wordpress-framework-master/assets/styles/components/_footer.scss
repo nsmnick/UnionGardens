@@ -21,6 +21,20 @@
         text-align: left;
       }
 
+      .copyright-message {
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+
+        @include bp(lap) {
+          max-width: unset;
+          text-align: left;
+          margin: 0;
+          font-size: 14px;
+        }
+
+      }
       .logo-container {
 
         display: block;

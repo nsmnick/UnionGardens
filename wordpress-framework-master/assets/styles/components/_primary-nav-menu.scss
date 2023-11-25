@@ -11,7 +11,7 @@
 	.mobile-only {
 
 		display: block;
-		@include bp($menu-snap) {
+		@include bp($mobile-menu-snap) {
 			display: none;
 		}
 	}
@@ -20,7 +20,7 @@
 
 		display: none;
 
-		@include bp($menu-snap) {
+		@include bp($mobile-menu-snap) {
 			display: block;
       padding-top: 20px;
 		}
@@ -46,7 +46,7 @@
 		}
 	}
 
-	@include bp($menu-snap) {
+	@include bp($mobile-menu-snap) {
 		flex-direction: row;
 		justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@
 
 		
 
-		@include bp($menu-snap) {
+		@include bp($mobile-menu-snap) {
 			text-align: left;
 			color: getcolor('black');
 			margin: 0px 0 0px;
@@ -87,7 +87,7 @@
 			text-decoration: none;
 
 
-			@include bp($menu-snap) {
+			@include bp($mobile-menu-snap) {
 				color: getcolor('black');
 				padding: 10px 20px;
 
@@ -108,7 +108,7 @@
 			> a {
 				color: getcolor('brand_blue');
 
-				@include bp($menu-snap) {
+				@include bp($mobile-menu-snap) {
 					
 					color: getcolor('black');
           			transform: 1s solid ease-in-out;

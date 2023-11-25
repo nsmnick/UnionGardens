@@ -1,22 +1,20 @@
 .page-header {
-  width: 100%;
-  z-index: 500;
-  display: block;
-  
-  position: absolute;
-  top: 40px;
+	width: 100%;
+	z-index: 500;
+	display: block;
 
-
-  background-color: rgba(255,255,255,.5);
+	position: absolute;
+	top: 20px;
+	background-color: rgba(255,255,255,.5);
 
 	width: 100%;
 	height: 100px;
-
 	overflow: visible;
 	z-index: 99999;
 
 	@include bp($mobile-menu-snap) {
 		height: 100px;
+		top: 40px;
 	}
 
 
@@ -33,7 +31,7 @@
 		left: 100%;
 		width: 100%;
 		z-index: 9999;
-		padding-top: 140px;
+		padding-top: 120px;
 		overflow: auto;
 		transition: left .2s ease-out;
 
@@ -63,8 +61,8 @@
 
 		z-index: 10000;
 		display: block;
-    margin: 0 auto;
-    padding-top: 10px;
+		margin: 0 auto;
+		padding-top: 10px;
 
 		@include bp($mobile-menu-snap) {
 			display: none;
@@ -74,16 +72,14 @@
 	&__mobile-logo {
 
 		padding-top: 10px;
-		margin: 0px auto 0px;
+		margin: 10px auto 0px;
 
-		background-image: url('../images/union-gardens-logo.svg');
+		background-image: url('../images/union-gardens-logo-mobile.svg');
 		background-size: contain;
 		background-repeat: no-repeat;
 
-		// width: 260px;
-		// height: 112px;
-		width: 357px;
-		height: 53px;
+		width: 153px;
+		height: 56px;
 
 	}
 
