@@ -151,6 +151,17 @@ $max-mobile-width: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        .caption {
+          position: absolute;
+          background-color: rgba(0,0,0,.05);
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin-bottom: 0;
+          padding: 2px;
+        }
       }
   
       .swiper-slide img {
@@ -159,7 +170,7 @@ $max-mobile-width: 500px;
         height: 100%;
         object-fit: cover;
       }
-      
+
 
       .swiper {
         width: 100%;
@@ -203,6 +214,15 @@ $max-mobile-width: 500px;
         height: 100%;
         object-fit: cover;
       }
+
+      .swiper-button-next, .swiper-button-prev {
+        color: getcolor('white');
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+
+        &::after {
+          text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+        }
+      } 
 
 
     }

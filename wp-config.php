@@ -1,4 +1,6 @@
 <?php
+define( 'WP_CACHE', true ); // By Speed Optimizer by SiteGround
+
 
 define( 'ITSEC_ENCRYPTION_KEY', 'U2YjaVF+a1pxXk9qLElab0U/Ki1eY3xAblU5czZuTmBGTT83LyBbfks4O0JrTFEkUChHIWghQGk1YlEkNkJRbA==' );
 
@@ -28,7 +30,7 @@ define( 'ITSEC_ENCRYPTION_KEY', 'U2YjaVF+a1pxXk9qLElab0U/Ki1eY3xAblU5czZuTmBGTT8
 define('GA_CODE', '');
 //define('GA_LEAP_CODE', '');
 
-define('TESTUSER', 'uniongardens');
+define('TESTUSER', 'testunionuser');
 //define('TESTUSER', '');
 
 
@@ -37,10 +39,10 @@ define('DB_NAME', 'uniongardens');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 
-// STG
-// define('DB_NAME', 'dbqeffgfribwpg');
-// define('DB_USER', 'un2socsadradb');
-// define('DB_PASSWORD', '0qihbfnujmka');
+// LIVE
+// define('DB_NAME', 'dbsj6j3gdk5fpn');
+// define('DB_USER', 'u0jgg0zyvnv4r');
+// define('DB_PASSWORD', 'hukyjlpwyh8e');
 
 
 
@@ -97,7 +99,7 @@ $table_prefix  = 'gf_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

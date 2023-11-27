@@ -11,7 +11,7 @@ get_header();
     <div class="container">
 
         <div class="content-container">
-            <h1 class="animate-fade"><?php echo get_field('introduction_heading');?></h1>
+            <h1 class="fade-in"><?php echo get_field('introduction_heading');?></h1>
             
             <div class="introduction animate">
                 <?php echo get_field('introduction_bold');?>
@@ -34,19 +34,25 @@ get_header();
 <section class="panel panel--ext-top content content__gallery">
     <div class="container">
 
-        <?php $floorplan_gallery = get_field('image_gallery');
+        <?php $image_gallery = get_field('image_gallery');
         
-        echo '<h2 class="animate-fade">'.$floorplan_gallery['heading'].'</h2>';
+        echo '<h2 class="animate-fade">'.$image_gallery['heading'].'</h2>';
 
         $slides_html = '';
         $thumbs_html = '';
         $array = [];
 
-        foreach ($floorplan_gallery['images'] as $key=>$image) {
+        foreach ($image_gallery['images'] as $key=>$image) {
           
             $slides_html .= '<div class="swiper-slide">'
-                                    . '<img src="'.$image['image'].'"/>'
-                            . '</div>';
+                            . '<img src="'.$image['image'].'"/>';
+
+            if($image['caption'])
+            {
+                $slides_html .= '<p>' . $image['caption'] . '</p>';
+            }
+
+            $slides_html .= '</div>';
 
             $thumbs_html .= '<div class="swiper-slide">'
                             . '<img src="'.$image['image'].'"/>'
@@ -55,7 +61,7 @@ get_header();
         
         ?>
 
-        <div class="gallery-slider-container class="animate-fade"">
+        <div class="gallery-slider-container" class="animate-fade">
 
         
 
@@ -64,6 +70,8 @@ get_header();
                     <div class="swiper-wrapper">
                         <?php echo $slides_html; ?>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
 
@@ -91,6 +99,10 @@ get_header();
                 thumbs: {
                     swiper: galleryThumbsSlider,
                 },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
             });
         </script>
 
@@ -115,8 +127,14 @@ get_header();
         foreach ($floorplan_gallery['images'] as $key=>$image) {
           
             $slides_html .= '<div class="swiper-slide">'
-                                    . '<img src="'.$image['image'].'"/>'
-                            . '</div>';
+                            . '<img src="'.$image['image'].'"/>';
+
+            if($image['caption'])
+            {
+                $slides_html .= '<p class="caption">' . $image['caption'] . '</p>';
+            }
+
+            $slides_html .= '</div>';
 
             $thumbs_html .= '<div class="swiper-slide">'
                             . '<img src="'.$image['image'].'"/>'
@@ -132,6 +150,8 @@ get_header();
                     <div class="swiper-wrapper">
                         <?php echo $slides_html; ?>
                     </div>
+                    <div class="swiper-button-next fp-swiper-button-next"></div>
+                    <div class="swiper-button-prev fp-swiper-button-prev"></div>
                 </div>
             </div>
 
@@ -159,6 +179,10 @@ get_header();
                 thumbs: {
                     swiper: fpGalleryThumbsSlider,
                 },
+                navigation: {
+                    nextEl: ".fp-swiper-button-next",
+                    prevEl: ".fp-swiper-button-prev",
+                },
             });
         </script>
 
@@ -171,24 +195,13 @@ get_header();
 <a name="express-interest" id="express-interest"></a>
 <section class="panel content content__form">
     <div class="container">
-
         <h2 class="animate-fade"><?php echo get_field('form_heading');?></h2>
-
-
         <div class="gravity-form-container animate">
-            <?php 
-                echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');
-            ?>
-
+            <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
             <p class="privacy"><?php echo get_field('form_privacy_message');?></p>
-
         </div>
-
-        
-
     </div>
 </section>
-
 
 <?php
 get_footer();
