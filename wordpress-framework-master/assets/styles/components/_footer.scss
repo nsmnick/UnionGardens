@@ -65,17 +65,19 @@
             background-image: url('../images/roffey-homes-logo.webp');
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
             width: 223px;
             height: 60px;
-            @include bp(lap) {
-              margin-right: 20px;
-            }
+            // @include bp(lap) {
+            //   margin-right: 20px;
+            // }
           }
 
           .wbc-logo {
             background-image: url('../images/wbc-logo.svg');
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
             width: 223px;
             height: 60px;
           }
