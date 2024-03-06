@@ -13,7 +13,7 @@
 			<div class="footer-container__col footer-container__col--right">
 
 				<div class="logo-container">
-					<div class="logo-container__col">
+					<div class="logo-container__col logo-container__col--pt">
 						<div class="roffey-logo"></div>
 					</div>	
 					<div class="logo-container__col">

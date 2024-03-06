@@ -34,6 +34,6 @@ $config = array (
   ),
   'output_dir' => '/Users/nickmorley/Sites/localhost/nsmprojects/unionGardens/wp-content/cache/sgo-cache/',
   'logged_in_cache' => 0,
-  'cache_secret_key' => '5f176844ca8e1f0015b538793ffe6aa9',
+  'cache_secret_key' => 'a9bdafc3e244fd2b9c31814498a827e3',
   'logged_in_cookie' => 'wordpress_logged_in_ffe50e31cc0272f36e0a385767e7a7f3',
 );

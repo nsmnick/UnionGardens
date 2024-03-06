@@ -55,14 +55,18 @@
           @include bp(lap) {
             flex: 1 1 auto;
             margin-bottom: 0px;
+
+            &--pt {
+              padding-top: 6px;
+            }
           }
 
           .roffey-logo {
-            background-image: url('../images/roffey-homes-logo.svg');
+            background-image: url('../images/roffey-homes-logo.webp');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 192px;
-            height: 78px;
+            width: 223px;
+            height: 60px;
             @include bp(lap) {
               margin-right: 20px;
             }
@@ -72,8 +76,8 @@
             background-image: url('../images/wbc-logo.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 192px;
-            height: 78px;
+            width: 223px;
+            height: 60px;
           }
     
     
